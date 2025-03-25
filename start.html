@@ -320,7 +320,17 @@
             <!-- Right Section: Contact Form -->
             <div class="form-wrap">
                 <h2 class="form-title">Start Your Smart Networking Journey</h2>
-                <form action="https://script.google.com/macros/s/AKfycbwQXRAiK7T_wyhdVdCUv12DyqtnzLBXejybC-vX8o9J6vmARF28SIFXNv-YHmRLvSd3/exec" method="POST" id="contact-form">
+                
+                    <form 
+  action="https://script.google.com/macros/s/AKfycbwQXRAiK7T_wyhdVdCUv12DyqtnzLBXejybC-vX8o9J6vmARF28SIFXNv-YHmRLvSd3/exec" 
+  method="POST" 
+  id="contact-form"
+  onsubmit="submitAndRedirect(event)"
+>
+
+  <!-- Your form fields here -->
+ 
+
                     <div class="form-fields">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
@@ -351,12 +361,38 @@
                         <div class="form-group full-width">
                             <textarea name="message" placeholder="Your Message" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="submit-button">Send Message</button>
+                         <button type="submit" class="submit-button">Send Message</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
+<script>
+  async function submitAndRedirect(event) {
+    event.preventDefault(); // Stop default form submission
+    
+    const form = event.target;
+    const formData = new FormData(form);
+
+    try {
+      // Submit form data to Google Apps Script
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+      });
+
+      if (response.ok) {
+        // Redirect only after successful submission
+        window.location.href = "buying page.html";
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+</script>
 </html>
+
+<a href="start.html"class="cta-button">
