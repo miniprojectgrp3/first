@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - NextGen AR Contact Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .thank-you-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #4f46e5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .success-icon::before {
+            content: "✓";
+            color: white;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: #4f46e5;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .order-number {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+
+        .next-steps {
+            text-align: left;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .next-steps h2 {
+            color: #4f46e5;
+            margin-bottom: 1rem;
+        }
+
+        .next-steps li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .next-steps li::before {
+            content: "•";
+            color: #4f46e5;
+            position: absolute;
+            left: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #4f46e5;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #6366f1;
+        }
+
+        .support-info {
+            margin-top: 2rem;
+            color: #6b7280;
+        }
+
+        @media (max-width: 640px) {
+            .thank-you-card {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-card">
+            <div class="success-icon"></div>
+            <h1>Thank You for Your Order!</h1>
+            <p>Your AR-enhanced contact card experience is being prepared.</p>
+            
+            <div class="order-number">
+                Order #: AR-2025-0123
+            </div>
+
+            <div class="next-steps">
+                <h2>What's Next?</h2>
+                <ul>
+                    <li>You'll receive an email confirmation shortly with your order details.</li>
+                    <li>Complete your profile setup using the link in the confirmation email.</li>
+                    <li>Your NFC-enabled AR contact card will be shipped within 3-5 business days.</li>
+                    <li>Once received, activate your card using our mobile app.</li>
+                </ul>
+            </div>
+
+            <div>
+        
+                <a href="index.html" class="button">Return Home</a>
+            </div>
+
+            <div class="support-info">
+                <p>Need help? Contact our support team at</p>
+                <p>support@nextgenar.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
